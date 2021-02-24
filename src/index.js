@@ -21,6 +21,7 @@ function ObtenerNumero(){
 
 function Datos (){
   var tarjeta = document.getElementById('InsertarNumeroTarjeta');
+}
    
 
 // TARJETA DATOS 
