@@ -20,7 +20,7 @@
 
 <!-- INGRESO DE DATOS DE LA TARJETA  -->
 <main>
-<div class= "cajaPrincipal" > 
+<div class= "cajaPrincipal" id="cajaPrincipal"> 
     <form class=form> 
       <h1> TARJETA DE CREDITO</h1>
         <input class="input" id="InsertarNumeroTarjeta" type="number" placeholder="Numero de tarjeta"  > 
@@ -28,11 +28,13 @@
         <input class="input" id="Documento" type="number" placeholder="Numero de documento"> 
         <input  class="input" id="cvv"type="number" placeholder="ingrese cvv"> 
 
+        <input type="button" id="ValidarTarjeta" value="Obtener numero" />
 
-        <button type= button id="siguiente" >VALIDAR PAGO</button>
+        <!-- <button onclick='Datos()' id="siguiente">VALIDAR PAGO</button> -->
         
     </form>
 </div>
+
 <!-- VISUALIZACION DE LA TARJETA DEL USUARIO  -->
 <div class="tarjeta">
 
