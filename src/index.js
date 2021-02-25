@@ -1,29 +1,39 @@
-import validator from './validator.js';
+// import validator from './validator.js';
 
-console.log(validator);
+// console.log(validator);
 // MOSTRAR PANTALLAS
 
-function Mostrar(){
-    document.getElementById("cajavalido").style.display = "block";
 
 
-  // OBTENER DATOS OPCION 1
+// // TARJETA DATOS 
 
-function ObtenerNumero(){
-  let numero = localStorage.getItem('numero');
+// function mostrarnumero(){
+//    numero = document.getElementById( 'InsertarNumeroTarjeta').value;
+//     ;
+// }
+// siguiente.addEventListener("click", mostrarnumero);
 
+  
+  // nombra el input con la variable
+let InputNumero = document.querySelector("#InsertarNumeroTarjeta")
 
-} 
-// OBTENER DATOS OPCION 2
+// añade al input un evento por letra digitada y en el evento la funcion 
+    InputNumero.addEventListener("keyup", function(){
+      // le doy valor al input y un creo otra variable
+      let tarjeta = InputNumero.value; 
 
-// var tarjeta = ""
+      // nombro el texto con una variable
+      let mensajenumero = document.querySelector("#NumeroT");
 
-function Datos (){
-  var tarjeta = document.getElementById('InsertarNumeroTarjeta');
-}
-   
+      // Uno la variable del input con la variable del texto de la tarjeta
+      // y edito lo que hay dentro del texto con inner
+      mensajenumero.innerText = tarjeta;
 
-// TARJETA DATOS 
+      if (tarjeta == "") {
+        mensajenumero.innerText = "xxxx xxxx xxxxx xxxx";
+        
+      }
+    });
 
-const NumeroTarjeta= document.getElementById( 'NumeroT');
-NumeroTarjeta = tarjeta;
+    
+

@@ -42,7 +42,8 @@ body{
 }
 
 .tarjeta {
-    background-color: #F392b5;
+    background:radial-gradient( circle at 33% 100%,
+    #f3aed4 4%, #F392b5 30%, #d92e7f 62%, #515ecf);
     width: 397px; height: 278px;
     border-radius: 30px;
     position: absolute;
@@ -52,20 +53,39 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     text-align: center;
-    display: none;
+    /* display: none; */
 }
 .logo{
     width: 55px; height: 45px;
     position: relative;
     top: 40px;
     right: 70px;
+    border-radius: 10px;
+    
 }
 #NumeroT{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 35px;
     color: white;
     position: relative;
-    top: 40px;
+    top: 60px;
+}
+.NombreDeUsuario{
+    position: absolute;
+    top:195px;
+    left: 25px;
+    font-size: 20px;
+}
+.IngresoCVV{
+    position:absolute;
+    top: 170px;
+    left: 25px;
+
+}
+.NumeroDeDocumento{
+    position:absolute;
+    top: 170px;
+    left: 75px;
 }
 /* ESTILO FORMULARIO DONDE LLEVA LOS INPUTS */
 .form{
@@ -128,14 +148,15 @@ body{
     border-radius: 20px;
     position: absolute;
     top: 1450px;
-    right: 390px;;
+    right: 390px;
     
 
 }
  .tarjetaInvalida{
-    background-color: #F392b5;
     width: 397px; height: 278px;
     border-radius: 30px;
+    background:radial-gradient( circle at 33% 100%,
+    #f3aed4 4%, #F392b5 30%, #d92e7f 62%, #515ecf);
     position: absolute;
     top: 1480px;
     right: 520px;;
