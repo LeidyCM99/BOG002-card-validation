@@ -5,8 +5,7 @@ console.log(validator);
 
 function Mostrar(){
     document.getElementById("cajavalido").style.display = "block";
-     
-  }
+
 
   // OBTENER DATOS OPCION 1
 
