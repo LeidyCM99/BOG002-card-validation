@@ -23,29 +23,26 @@
 <div class= "cajaPrincipal" id="cajaPrincipal"> 
     <form class=form> 
       <h1> TARJETA DE CREDITO</h1>
-        <input class="input" id="InsertarNumeroTarjeta" type="number" placeholder="Numero de tarjeta"  > 
+        <input class="input" id="InsertarNumeroTarjeta" type="number" placeholder="Numero de tarjeta" > 
         <input  class="input" id="Nombre" type="text" placeholder="Nombre y apellido"> 
         <input class="input" id="Documento" type="number" placeholder="Numero de documento"> 
-        <input  class="input" id="cvv"type="number" placeholder="ingrese cvv"> 
+        <input  class="input" id="cvv" type="number" placeholder="ingrese cvv"> 
 
-        <input type="button" id="ValidarTarjeta" value="Obtener numero" />
-
+        <input type="button" id="ValidarTarjeta" value="SIGUIENTE" />
+      
         <!-- <button onclick='Datos()' id="siguiente">VALIDAR PAGO</button> -->
+
+        <!-- VISUALIZACION DE LA TARJETA DEL USUARIO  -->
+    <div class="tarjeta">
+       <img src="logo.png" class="logo">
+       <div class=" Datos" id="Datos">
+       <div id="NumeroT"> <p>xxxx xxxx xxxxx xxxx </p> </div>
+       <div class="NombreDeUsuario"> <p>Pepito Perez </p> </div>
+       <span class="NumeroDeDocumento"> <p> 152684415 </p> </span>
+       <span class="IngresoCVV"> <p> 421 </p> </span> </div>
+    </div>
         
     </form>
-</div>
-
-<!-- VISUALIZACION DE LA TARJETA DEL USUARIO  -->
-<div class="tarjeta">
-
-  <img src="logo.png" class="logo">
-  <div class=" Datos" id="Datos">
-    <div id="NumeroT"> <p>xxxx xxxx xxxxx xxxx </p> </div>
-    <div class="NombreDeUsuario"> <p>Pepito Perez </p> </div>
-    <span class="NumeroDeDocumento"> <p> 152684415 </p> </span>
-    <span class="IngresoCVV"> <p> 421 </p> </span>
-
-  </div>
 </div>
 
 </main>
@@ -56,24 +53,20 @@
 <div id="cajavalido">
   <img src="Verificado.png" id="imagen2">
   <h1>PAGO REALIZADO</h1>
-  <button id="atras" onclick="Mostrar()">ATRÁS</button>
+  <button id="Redireccionar">SIGUE ESCUCHANDO NUESTRO PODCAST</button>
 </div>
 </main>
 
 
 <!-- PANTALLA 3 INVALIDA -->
-
-
-
 <main>
 <div id="cajaInvalido">
-  <button id="atras" onclick="Mostrar()">ATRÁS</button>
+  <button id="atras">ATRÁS</button>
+  <p id="text"> NUMERO DE TARJETA INVALIDO </p>
+  <img src="x-30465_1280.webp"  id="invalido">
+  <div class="tarjetaInvalida"> </div>
 </div>
  
- <p id="text"> NUMERO DE TARJETA INVALIDO </p>
- <img src="x-30465_1280.webp"  id="invalido">
- <div class="tarjetaInvalida"> </div>
-
 </main>
 
 
@@ -88,6 +81,6 @@
   
 </div>
 </footer>
-<script src="index.js" ></script>
+<script src="index.js" type="module"></script>
 </body>
 </html>

@@ -11,26 +11,45 @@ function Mostrar(){
 
 function Ocultar () {
 document.getElementById("cajaPrincipal").style.display = "none";
-
 }
-// OBTENER DATOS OPCION 3
+
+// OBTENER DATOS 
 
 function ObtenerNumero (){
   let numero = document.getElementById("InsertarNumeroTarjeta").value;
-  console.log (numero);
+  let adjuntarNumeros = [numero];
+  console.log (adjuntarNumeros);
+  // let reverse = adjuntarNumeros.reverse();
+  // console.log (reverse);
   Mostrar ();
   Ocultar ();
   }
   let BotonValidar = document.getElementById("ValidarTarjeta");
   BotonValidar.addEventListener("click", ObtenerNumero);
 
-// // TARJETA DATOS 
+  
+  
 
-// function mostrarnumero(){
-//    numero = document.getElementById( 'InsertarNumeroTarjeta').value;
-//     ;
-// }
-// siguiente.addEventListener("click", mostrarnumero);
+
+// BOTON REDIRECCIONAR PANTALLA 2
+
+let LinkSpotify;
+
+function Redireccionar () {
+  LinkSpotify = window.open("https://open.spotify.com/show/4PW2LRsOMXqTE4vY6m0Mp7?si=SJags5c-TsWfPVbjI6LyZg");
+}
+let BotonRedireccionar = document.getElementById("Redireccionar");
+BotonRedireccionar.addEventListener("click", Redireccionar);
+
+
+// BOTON ATRÁS PANTALLA 3
+
+function Regresar () {
+  document.getElementById("cajaInvalido").style.display = "none";
+}
+let BotonRegresar = document.getElementById("atras");
+BotonRegresar.addEventListener("click", Regresar);
+
 
   
   // nombra el input con la variable
@@ -63,7 +82,13 @@ let InputNumero = document.querySelector("#InsertarNumeroTarjeta")
 //   let mensaje = prompt ("Hola");
 // }
 
+// // TARJETA DATOS 
 
+// function mostrarnumero(){
+//    numero = document.getElementById( 'InsertarNumeroTarjeta').value;
+//     ;
+// }
+// siguiente.addEventListener("click", mostrarnumero);
 
 
 //   // OBTENER DATOS OPCION 1
@@ -89,7 +114,6 @@ let InputNumero = document.querySelector("#InsertarNumeroTarjeta")
 
 // const NumeroTarjeta= document.getElementById( 'NumeroT');
 // NumeroTarjeta = tarjeta;
-
 
 
 
