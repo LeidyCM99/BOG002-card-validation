@@ -48,7 +48,7 @@ body{
     border-radius: 30px;
     position: absolute;
     top: 300px;
-    left: 350px;
+    left: 520px;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
@@ -70,11 +70,12 @@ body{
     position: relative;
     top: 60px;
 }
-.NombreDeUsuario{
+#NombreDeUsuario{
     position: absolute;
-    top:195px;
+    top:210px;
     left: 25px;
     font-size: 20px;
+    text-transform: uppercase;
 }
 .IngresoCVV{
     position:absolute;
@@ -84,8 +85,9 @@ body{
 }
 .NumeroDeDocumento{
     position:absolute;
-    top: 170px;
+    top: 185px;
     left: 75px;
+    display: inline;
 }
 /* ESTILO FORMULARIO DONDE LLEVA LOS INPUTS */
 .form{
@@ -160,7 +162,9 @@ body{
     #f3aed4 4%, #F392b5 30%, #d92e7f 62%, #515ecf);
     position: absolute;
     top: 1480px;
-    right: 520px;;
+    right: 520px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
     
  }
 #text{

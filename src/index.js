@@ -13,24 +13,42 @@ function Ocultar () {
 document.getElementById("cajaPrincipal").style.display = "none";
 
 }
-// OBTENER DATOS OPCION 3
+// ESPACIOS VACIOS 
+
+function EspacioNombre(){
+  // let Nombre = document.getElementById("Nombre").value;
+  // if (document.getElementById("Nombre")=="") {
+    alert("Por favor complete todos los campos");}
+
+
+// OBTENER DATOS OPCION 
 
 function ObtenerNumero (){
   let numero = document.getElementById("InsertarNumeroTarjeta").value;
-  console.log (numero);
+  let adjuntarnumeros = [numero];
+  adjuntarnumeros.reverse();
+  console.log (adjuntarnumeros);
+  
+  
+
+  
   Mostrar ();
   Ocultar ();
+  EspacioNombre();
   }
+    
   let BotonValidar = document.getElementById("ValidarTarjeta");
   BotonValidar.addEventListener("click", ObtenerNumero);
 
+  
+
+
+
+
+
 // // TARJETA DATOS 
 
-// function mostrarnumero(){
-//    numero = document.getElementById( 'InsertarNumeroTarjeta').value;
-//     ;
-// }
-// siguiente.addEventListener("click", mostrarnumero);
+
 
   
   // nombra el input con la variable
@@ -54,17 +72,52 @@ let InputNumero = document.querySelector("#InsertarNumeroTarjeta")
       }
     });
 
-    
+    let InputNombre = document.querySelector("#Nombre")
 
-// console.log(validator);
+        InputNombre.addEventListener("keyup", function(){
+        let Nombre = InputNombre.value;
+        let Mensajenombre = document.querySelector("#NombreDeUsuario");
+        Mensajenombre.innerText = Nombre;
 
-// //PRUEBA BOTÓN
-// function Prueba(){
-//   let mensaje = prompt ("Hola");
+
+        if (Nombre == ""){
+          Mensajenombre.innerText = "Nombre y apellido";
+        }
+
+      });
+       let InputDocumento = document.querySelector("#Documento")
+
+         InputDocumento.addEventListener("keyup", function(){
+         let Documento = InputDocumento.value;
+         let Mensajedocumento= document.querySelector(".NumeroDeDocumento");
+         Mensajedocumento.innerText = Documento;
+       });
+
+       let InputCVV = document.querySelector("#cvv")
+
+       InputCVV.addEventListener("keyup", function(){
+       let CVV = InputCVV.value;
+       let MensajeCVV= document.querySelector(".IngresoCVV");
+       MensajeCVV.innerText = CVV;
+     });
+
+
+// function mostrarnumero(){
+//    numero = document.getElementById( 'InsertarNumeroTarjeta').value;
+//     ;
 // }
+// siguiente.addEventListener("click", mostrarnumero);
+// ESPACIOS VACIOS 
 
 
 
+  
+
+
+
+     
+
+     
 
 //   // OBTENER DATOS OPCION 1
 
@@ -85,10 +138,6 @@ let InputNumero = document.querySelector("#InsertarNumeroTarjeta")
 
 
 
-// // TARJETA DATOS 
-
-// const NumeroTarjeta= document.getElementById( 'NumeroT');
-// NumeroTarjeta = tarjeta;
 
 
 
