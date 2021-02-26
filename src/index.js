@@ -25,9 +25,9 @@ function EspacioNombre(){
 
 function ObtenerNumero (){
   let numero = document.getElementById("InsertarNumeroTarjeta").value;
-  let adjuntarnumeros = [numero];
-  adjuntarnumeros.reverse();
-  console.log (adjuntarnumeros);
+  // let adjuntarnumeros = [numero];
+  let separar = numero.split(' ');
+  console.log (separar);
   
   
 

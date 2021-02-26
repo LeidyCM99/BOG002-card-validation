@@ -53,7 +53,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     text-align: center;
-    /* display: none; */
+    display: none;
 }
 .logo{
     width: 55px; height: 45px;
