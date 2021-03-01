@@ -17,8 +17,10 @@ document.getElementById("cajaPrincipal").style.display = "none";
 
 function ObtenerNumero (){
   let numero = document.getElementById("InsertarNumeroTarjeta").value;
-  // let adjuntarnumeros = [numero];
-  let separar= numero.split(/(\d)/).reverse();
+  // Poner numeros en un array 
+  let adjuntarnumeros = [numero];
+  // Separar numeros en posiciones e invertirlo
+  let separar= numero.split("").reverse();
   console.log (separar); 
   Mostrar ();
   Ocultar ();
