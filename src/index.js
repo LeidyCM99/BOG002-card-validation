@@ -3,6 +3,9 @@
 // console.log(validator);
 
 
+
+
+
 // MOSTRAR PANTALLAS
 
 function Mostrar(){
@@ -11,36 +14,66 @@ function Mostrar(){
 
 function Ocultar () {
 document.getElementById("cajaPrincipal").style.display = "none";
-
 }
-// ESPACIOS VACIOS 
 
-function EspacioNombre(){
-  // let Nombre = document.getElementById("Nombre").value;
-  // if (document.getElementById("Nombre")=="") {
-    alert("Por favor complete todos los campos");}
-
-
-// OBTENER DATOS OPCION 
+// OBTENER DATOS 
 
 function ObtenerNumero (){
   let numero = document.getElementById("InsertarNumeroTarjeta").value;
-  // let adjuntarnumeros = [numero];
-  let separar= numero.split(/(\d)/).reverse();
-  console.log (separar);
-  
-  
+  // Poner numeros en un array 
+  let adjuntarnumeros = [numero];
+  // Separar numeros en posiciones e invertirlo
+  let separar= numero.split("").reverse();
+  var n = separar.length;
+  // console.log(n);
 
-  
+  for (let i = 0; i < n; i++) { 
+
+    if (separar%2 == 0) {let multiplicar =  adjuntarnumeros.flatMap(x => [x * 2]);
+    console.log (multiplicar); 
+    
+  } else { console.log (alert("no es par"))
+    
+  }}
+  console.log (separar); 
   Mostrar ();
   Ocultar ();
-  EspacioNombre();
-  }
-    
+  // EspacioNombre();
+  }    
   let BotonValidar = document.getElementById("ValidarTarjeta");
   BotonValidar.addEventListener("click", ObtenerNumero);
 
-  
+
+// Numeros par 
+
+ 
+
+// ESPACIOS VACIOS 
+
+// function EspacioNombre(){
+  // let Nombre = document.getElementById("Nombre").value;
+  // if (document.getElementById("Nombre")=="") {
+    // alert("Por favor complete todos los campos");}
+
+// BOTON REDIRECCIONAR PANTALLA 2
+
+let LinkSpotify;
+
+function Redireccionar () {
+  LinkSpotify = window.open("https://open.spotify.com/show/4PW2LRsOMXqTE4vY6m0Mp7?si=SJags5c-TsWfPVbjI6LyZg");
+}
+let BotonRedireccionar = document.getElementById("Redireccionar");
+BotonRedireccionar.addEventListener("click", Redireccionar);
+
+
+// BOTON ATRÁS PANTALLA 3
+
+function Regresar () {
+  document.getElementById("cajaInvalido").style.display = "none";
+}
+let BotonRegresar = document.getElementById("atras");
+BotonRegresar.addEventListener("click", Regresar);
+
 
 
 
@@ -56,14 +89,14 @@ let InputNumero = document.querySelector("#InsertarNumeroTarjeta")
 
 // añade al input un evento por letra digitada y en el evento la funcion 
     InputNumero.addEventListener("keyup", function(){
-      // le doy valor al input y un creo otra variable
+// le doy valor al input y un creo otra variable
       let tarjeta = InputNumero.value; 
 
-      // nombro el texto con una variable
+// nombro el texto con una variable
       let mensajenumero = document.querySelector("#NumeroT");
 
-      // Uno la variable del input con la variable del texto de la tarjeta
-      // y edito lo que hay dentro del texto con inner
+// Uno la variable del input con la variable del texto de la tarjeta
+// y edito lo que hay dentro del texto con inner
       mensajenumero.innerText = tarjeta;
 
       if (tarjeta == "") {
@@ -114,7 +147,13 @@ let InputNumero = document.querySelector("#InsertarNumeroTarjeta")
   
 
 
+// // TARJETA DATOS 
 
+// function mostrarnumero(){
+//    numero = document.getElementById( 'InsertarNumeroTarjeta').value;
+//     ;
+// }
+// siguiente.addEventListener("click", mostrarnumero);
      
 
      
@@ -131,14 +170,4 @@ let InputNumero = document.querySelector("#InsertarNumeroTarjeta")
 // // var tarjeta = ""
 
 // function Datos (){
-//   var tarjeta = document.getElementById('InsertarNumeroTarjeta');
-// }
-   
-
-
-
-
-
-
-
-
+//   var tarjeta = document.getElementById('InsertarNumeroTarjeta');}
