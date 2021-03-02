@@ -17,11 +17,32 @@ document.getElementById("cajaPrincipal").style.display = "none";
 
 function ObtenerNumero (){
   let numero = document.getElementById("InsertarNumeroTarjeta").value;
+
   // Poner numeros en un array 
   let adjuntarnumeros = [numero];
-  // Separar numeros en posiciones e invertirlo
+
+  // Separar los numeros e invertirlos
   let separar= numero.split("").reverse();
-  console.log (separar); 
+  console.log (separar);
+
+  // Obtener un nuevo array con las posiciones pares
+  let numerosPares = [];
+  for (let i = 0; i < separar.length; i = i + 2){
+    numerosPares[i] = separar [i];
+    console.log (numerosPares[i]);
+  }
+
+  // Multiplicar por 2 las posiciones pares
+  let multiplicar =  numerosPares.flatMap(x => [x * 2]);
+  console.log (multiplicar);
+
+  // Sumar el resultado si es de dos dígitos
+  // if (multiplicar > 9){
+  //   let numeroDerecho = multiplicar % 10
+  //   let numeroIzquierdo = parseInt(multiplicar / 10)
+  //   multiplicar = numeroIzquierdo + numeroDerecho
+  
+
   Mostrar ();
   Ocultar ();
   EspacioNombre();
@@ -110,17 +131,12 @@ let InputNumero = document.querySelector("#InsertarNumeroTarjeta")
        MensajeCVV.innerText = CVV;
      });
 
-
 // function mostrarnumero(){
 //    numero = document.getElementById( 'InsertarNumeroTarjeta').value;
 //     ;
 // }
 // siguiente.addEventListener("click", mostrarnumero);
-// ESPACIOS VACIOS 
-
-
-
-  
+// ESPACIOS VACIOS
 
 
 // // TARJETA DATOS 
@@ -148,7 +164,4 @@ let InputNumero = document.querySelector("#InsertarNumeroTarjeta")
 // function Datos (){
 //   var tarjeta = document.getElementById('InsertarNumeroTarjeta');
 // }
-   
-
-
-
+  
