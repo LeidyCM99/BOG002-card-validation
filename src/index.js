@@ -25,6 +25,15 @@ function ObtenerNumero (){
   let separar= numero.split("").reverse();
   console.log (separar);
 
+  // Obtener un nuevo array con las posiciones impares
+  let numerosImpares = [];
+  for (let i = 1; i < separar.length; i = i + 2){
+    numerosImpares [i] = separar [i];
+    console.log (numerosImpares [i]);
+  }
+  // let resultadoImpar = separarImpares.reduce(function(a, b){ return a + b; });
+  // console.log (resultadoImpar);
+  
   // Obtener un nuevo array con las posiciones pares
   let numerosPares = [];
   for (let i = 0; i < separar.length; i = i + 2){
@@ -33,20 +42,55 @@ function ObtenerNumero (){
   }
 
   // Multiplicar por 2 las posiciones pares
-  let multiplicar =  numerosPares.flatMap(x => [x * 2]);
-  console.log (multiplicar);
+  let listaPares =  numerosPares.flatMap(x => [x * 2]);
+  console.log (listaPares);
 
   // Sumar el resultado si es de dos dígitos
-  // if (multiplicar > 9){
-  //   let numeroDerecho = multiplicar % 10
-  //   let numeroIzquierdo = parseInt(multiplicar / 10)
-  //   multiplicar = numeroIzquierdo + numeroDerecho
+  for (let i = 0; i < listaPares.length; i = i + 1){
+    let elementoActual = listaPares[i]
+    if (elementoActual > 9){
+      let numeroDerecho = elementoActual % 10
+      let numeroIzquierdo = parseInt(elementoActual / 10)
+      listaPares[i] = numeroIzquierdo + numeroDerecho
+    }
+  }
+  console.log (listaPares);
+
+  // let resultadoPar = listaPares.reduce(function(a, b){ return a + b; });
+  // console.log (resultadoPar);
+
+  // Sumar todos los dígitos
+  let array = listaPares.concat(numerosImpares);
+  console.log (array);
+
+  let resultado= array.reduce(function(a, b){ return a + b; });
+  console.log (resultado);
+
+  // let resultado = listaPares+numerosImpares.reduce(function(a, b){ return a + b; });
+  // console.log (resultado)
+    
   
+  // let array1 = [listaPares];
+  // let array2 = [numerosImpares];
+  // let array3 = []
+  // for (let i=0; i<resultado.length; i++) {
+  //   array3 = listaPares + numerosImpares
+  // }
+  // console.log (array3)
+
+//   for (var i=0; i<array3.length; i++) {
+// alert("Resultado " + i + " : " + array3[i]);
+
+
+
+  // console.log (suma);
+
+
 
   Mostrar ();
   Ocultar ();
   EspacioNombre();
-  }    
+}    
   let BotonValidar = document.getElementById("ValidarTarjeta");
   BotonValidar.addEventListener("click", ObtenerNumero);
 
