@@ -3,36 +3,31 @@ import validator from './validator.js';
 console.log(validator);
 
 
-
-
-
 // MOSTRAR PANTALLAS
 
 function Mostrar(){
-  document.getElementById("cajavalido").style.display = "block";
-}
+  document.getElementById("cajavalido").style.display = "block";}
+
+function Invalido(){
+  document.getElementById("cajaInvalido").style.display = "block";}
 
 function Ocultar () {
-document.getElementById("cajaPrincipal").style.display = "none";
+document.getElementById("cajaPrincipal").style.display = "none";}
 
-}
 // ESPACIOS VACIOS 
 
-function validar() {
-  var Numerotarjeta = document.getElementById("InsertarNumeroTarjeta").value
+// function validar()  {
+  
+  let Numerotarjeta = document.getElementById("InsertarNumeroTarjeta").value
+
+// if (Numerotarjeta == ""){
+//     alert("Debes llenar el campo");
+//        let deshabilitar= BotonValidar.addEventListener("click", ObtenerNumero);
+//           deshabilitar.disable = true;
+//   return false
 
 
-if (Numerotarjeta == ""){
-    alert("Debes llenar el campo");
-       let deshabilitar= BotonValidar.addEventListener("click", ObtenerNumero);
-          deshabilitar.disable = true;
-  return false
-
-}else {
-    alert("pago realizado")
-  return false
-}
-}
+// }
 
 
 
@@ -42,36 +37,28 @@ function ObtenerNumero (){
   let numero = document.getElementById("InsertarNumeroTarjeta").value;
 
   // Poner numeros en un array 
-  let adjuntarnumeros = [numero];
+  // let adjuntarnumeros = [numero];
 
   // Separar los numeros e invertirlos
   let separar= numero.split("").reverse();
   console.log (separar);
 
   // Obtener un nuevo array con las posiciones impares
-  let numerosImpares = [];
-  for (let i = 1; i < separar.length; i = i + 2){
-    numerosImpares [i] = separar [i];
-    console.log (numerosImpares [i]);
-  }
-  let resultadoImpar = separarImpares.flatMap(x=> [x-1]);
-  console.log (resultadoImpar);
-  
+  let numerosImpares = [] ;
+  for (let i = 0; i < separar.length; i = i + 2){
+    numerosImpares[i] = separar [i]
+    console.log(numerosImpares[i]);
+    }
+    
+  let listaImpares = numerosImpares.flatMap(x => [x * 1]);
+  console.log (listaImpares);
+
   // Obtener un nuevo array con las posiciones pares
   let numerosPares = [];
-  for (let i = 0; i < separar.length; i = i + 2){
+  for (let i = 1; i < separar.length; i = i + 2){
     numerosPares[i] = separar [i];
     console.log (numerosPares[i]);
   }
-
-  // Multiplicar por 2 las posiciones pares
-  // let multiplicar =  numerosPares.flatMap(x => [x * 2]);
-  // console.log (multiplicar);
-
-  // multiplicar.forEach(function (elemento) {
-    
-  //   console.log (elemento)
-  // });
 
    
   let listaPares =  numerosPares.flatMap(x => [x * 2]);
@@ -88,39 +75,39 @@ function ObtenerNumero (){
   }
   console.log (listaPares);
 
-  // let resultadoPar = listaPares.reduce(function(a, b){ return a + b; });
-  // console.log (resultadoPar);
+// Sumar todos los dígitos
 
-  // Sumar todos los dígitos
-  let array = listaPares.concat(numerosImpares);
+  let array = listaPares.concat(listaImpares);
   console.log (array);
 
   let resultado= array.reduce(function(a, b){ return a + b; });
   console.log (resultado);
 
-  // let resultado = listaPares+numerosImpares.reduce(function(a, b){ return a + b; });
-  // console.log (resultado)
+  let valideishon =resultado%10;
+  console.log(valideishon);
+
+
+  // Mostrar pantallas dependiendo del resultado
+
+
+  if (valideishon == 0) {  Mostrar (); Ocultar ();
+    
+  } 
+  else if (valideishon != 0) { Invalido(); Ocultar ();alert("numero invalido")
+    
+  } 
+  // else if  (Numerotarjeta == ""){
+  //       alert("Debes llenar el campo");
+  //          let deshabilitar= BotonValidar.addEventListener("click", ObtenerNumero);
+  //             deshabilitar.disable = true;
+  //     return false
     
   
-  validar ();
-  Mostrar ();
-  Ocultar ();
+
   
   }    
-  // let array1 = [listaPares];
-  // let array2 = [numerosImpares];
-  // let array3 = []
-  // for (let i=0; i<resultado.length; i++) {
-  //   array3 = listaPares + numerosImpares
-  // }
-  // console.log (array3)
+ 
 
-//   for (var i=0; i<array3.length; i++) {
-// alert("Resultado " + i + " : " + array3[i]);
-
-
-
-  // console.log (suma);
 
   let BotonValidar = document.getElementById("ValidarTarjeta");
   BotonValidar.addEventListener("click", ObtenerNumero);
@@ -128,12 +115,11 @@ function ObtenerNumero (){
 
 
 
+
 // BOTON REDIRECCIONAR PANTALLA 2
 
-let LinkSpotify;
-
 function Redireccionar () {
-  LinkSpotify = window.open("https://open.spotify.com/show/4PW2LRsOMXqTE4vY6m0Mp7?si=SJags5c-TsWfPVbjI6LyZg");
+  window.open("https://open.spotify.com/show/4PW2LRsOMXqTE4vY6m0Mp7?si=SJags5c-TsWfPVbjI6LyZg");
 }
 let BotonRedireccionar = document.getElementById("Redireccionar");
 BotonRedireccionar.addEventListener("click", Redireccionar);
@@ -143,6 +129,7 @@ BotonRedireccionar.addEventListener("click", Redireccionar);
 
 function Regresar () {
   document.getElementById("cajaInvalido").style.display = "none";
+  document.getElementById("cajaPrincipal").style.display = "block"
 }
 let BotonRegresar = document.getElementById("atras");
 BotonRegresar.addEventListener("click", Regresar);
@@ -151,8 +138,6 @@ BotonRegresar.addEventListener("click", Regresar);
 // // TARJETA DATOS 
 
 // Numero de la tarjeta 
-
-  
 
 let InputNumero = document.querySelector("#InsertarNumeroTarjeta") 
     InputNumero.addEventListener("keyup", function(){
@@ -176,6 +161,10 @@ let InputNumero = document.querySelector("#InsertarNumeroTarjeta")
         let Mensajenombre = document.querySelector("#NombreDeUsuario");
         Mensajenombre.innerText = Nombre;
 
+        InputNombre.addEventListener("keyup", function () {
+    let Nombre = InputNombre.value;
+    let Mensajenombre = document.querySelector("#NombreDeUsuario");
+        Mensajenombre.innerText = Nombre;
 
         if (Nombre == ""){
           Mensajenombre.innerText = "Nombre y apellido";
@@ -192,12 +181,7 @@ let InputNumero = document.querySelector("#InsertarNumeroTarjeta")
          Mensajedocumento.innerText = Documento;
        });
 // Codigo cvv 
-       let InputCVV = document.querySelector("#cvv")
+       let InputCVV = document.querySelector("#cvv");
 
-       InputCVV.addEventListener("keyup", function(){
-       let CVV = InputCVV.value;
-       let MensajeCVV= document.querySelector(".IngresoCVV");
-       MensajeCVV.innerText = CVV;
-     });
-
-
+        
+         })
