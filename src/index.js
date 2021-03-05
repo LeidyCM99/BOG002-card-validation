@@ -83,17 +83,17 @@ function ObtenerNumero (){
   let resultado= array.reduce(function(a, b){ return a + b; });
   console.log (resultado);
 
-  let valideishon =resultado%10;
-  console.log(valideishon);
+  let validacion =resultado%10;
+  console.log( validacion);
 
 
   // Mostrar pantallas dependiendo del resultado
 
 
-  if (valideishon == 0) {  Mostrar (); Ocultar ();
+  if (validacion == 0) {  Mostrar (); Ocultar ();
     
   } 
-  else if (valideishon != 0) { Invalido(); Ocultar ();alert("numero invalido")
+  else if (validacion != 0) { Invalido(); Ocultar ();alert("numero invalido")
     
   } 
   // else if  (Numerotarjeta == ""){
