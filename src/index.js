@@ -161,11 +161,8 @@ let InputNumero = document.querySelector("#InsertarNumeroTarjeta")
         let Mensajenombre = document.querySelector("#NombreDeUsuario");
         Mensajenombre.innerText = Nombre;
 
-        InputNombre.addEventListener("keyup", function () {
-    let Nombre = InputNombre.value;
-    let Mensajenombre = document.querySelector("#NombreDeUsuario");
-        Mensajenombre.innerText = Nombre;
-
+        
+      
         if (Nombre == ""){
           Mensajenombre.innerText = "Nombre y apellido";
         }
@@ -174,14 +171,29 @@ let InputNumero = document.querySelector("#InsertarNumeroTarjeta")
 // Numero de identificacion
 
        let InputDocumento = document.querySelector("#Documento")
-
          InputDocumento.addEventListener("keyup", function(){
+
          let Documento = InputDocumento.value;
-         let Mensajedocumento= document.querySelector(".NumeroDeDocumento");
+         let Mensajedocumento= document.querySelector("#NumeroDeDocumento");
          Mensajedocumento.innerText = Documento;
        });
-// Codigo cvv 
-       let InputCVV = document.querySelector("#cvv");
 
+       if (Documento == ""){
+        Mensajedocumento.innerText = "Numero de documento";
+      }
+    
+// Codigo cvv 
+
+       let InputCVV = document.querySelector("#cvv");
+       InputCVV.addEventListener("keyup", function(){
+        let CVV= InputCVV.value;
+        let MensajeCVV= document.querySelector("#IngresoCVV");
+        MensajeCVV.innerText = CVV;
+      });
+
+      if (CVV== ""){
+       MensajeCVV.innerText = "CVV";
+     }
+;
         
-         })
+         
