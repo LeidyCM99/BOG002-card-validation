@@ -14,20 +14,7 @@ function Invalido(){
 function Ocultar () {
 document.getElementById("cajaPrincipal").style.display = "none";}
 
-// ESPACIOS VACIOS 
 
-// function validar()  {
-  
-  let Numerotarjeta = document.getElementById("InsertarNumeroTarjeta").value
-
-// if (Numerotarjeta == ""){
-//     alert("Debes llenar el campo");
-//        let deshabilitar= BotonValidar.addEventListener("click", ObtenerNumero);
-//           deshabilitar.disable = true;
-//   return false
-
-
-// }
 
 
 
@@ -95,17 +82,6 @@ function ObtenerNumero (){
   else if (validacion != 0) { Invalido(); Ocultar ();alert("numero invalido")
     
   } 
-  // else if  (Numerotarjeta == ""){
-  //       alert("Debes llenar el campo");
-  //          let deshabilitar= BotonValidar.addEventListener("click", ObtenerNumero);
-  //             deshabilitar.disable = true;
-  //     return false
-    
-  
-
-  
-  }    
- 
 
 
   let BotonValidar = document.getElementById("ValidarTarjeta");
@@ -161,7 +137,7 @@ let InputNumero = document.querySelector("#InsertarNumeroTarjeta")
 
         
       
-        if (Nombre == ""){
+        if (Nombre = "" ){
           Mensajenombre.innerText = "Nombre y apellido";
         }
       });
@@ -192,6 +168,17 @@ let InputNumero = document.querySelector("#InsertarNumeroTarjeta")
       if (CVV== ""){
        MensajeCVV.innerText = "CVV";
      }
-;
-        
-         
+
+    // ESPACIOS VACIOS 
+    
+// if (InputNumero.length || InputNombre.length || InputDocumento.length || InputCVV.length == 0){
+//   alert("campos vacios");
+      
+//     }
+
+  
+
+
+
+
+}
