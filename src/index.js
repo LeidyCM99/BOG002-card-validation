@@ -158,8 +158,7 @@ InputCVV.addEventListener("keyup", function () {
 });
 
 if (CVV == "") {
-  MensajeCVV.innerText = "CVV";
-}
+  MensajeCVV.innerText = "CVV";}
 ;
 
 // ESPACIOS VACIOS 
@@ -177,4 +176,3 @@ if (CVV == "") {
 
 // }
         
-         
