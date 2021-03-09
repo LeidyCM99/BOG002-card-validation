@@ -23,9 +23,6 @@ document.getElementById("cajaPrincipal").style.display = "none";}
 function ObtenerNumero (){
   let numero = document.getElementById("InsertarNumeroTarjeta").value;
 
-  // Poner numeros en un array 
-  // let adjuntarnumeros = [numero];
-
   // Separar los numeros e invertirlos
   let separar= numero.split("").reverse();
   console.log (separar);
@@ -46,7 +43,6 @@ function ObtenerNumero (){
     numerosPares[i] = separar [i];
     console.log (numerosPares[i]);
   }
-
    
   let listaPares =  numerosPares.flatMap(x => [x * 2]);
   console.log (listaPares);
@@ -72,10 +68,7 @@ function ObtenerNumero (){
   let validacion =resultado%10;
   console.log( validacion);
 
-
   // Mostrar pantallas dependiendo del resultado
-
-
   if (validacion == 0) {  Mostrar (); Ocultar ();
     
   } 
@@ -90,7 +83,7 @@ function ObtenerNumero (){
 
 // ESPACIOS VACIOS 
 
-
+// BOTÓN REDIRECCIONAR PANTALLA 2
 
 function Redireccionar () {
   window.open("https://open.spotify.com/show/4PW2LRsOMXqTE4vY6m0Mp7?si=SJags5c-TsWfPVbjI6LyZg");
@@ -113,72 +106,59 @@ BotonRegresar.addEventListener("click", Regresar);
 
 // Numero de la tarjeta 
 
-let InputNumero = document.querySelector("#InsertarNumeroTarjeta") 
-    InputNumero.addEventListener("keyup", function(){
+let InputNumero = document.querySelector("#InsertarNumeroTarjeta");
+InputNumero.addEventListener("keyup", function () {
 
+  let InputTarjeta = document.querySelector("#InsertarNumeroTarjeta").value;
+  let ultimoDigito = InputTarjeta.slice(-4);
+  let maskify = "#### #### #### " + ultimoDigito;
+  let mensajenumero = document.querySelector("#NumeroT");
+  mensajenumero.innerText = maskify;
 
-      let tarjeta = InputNumero.value; 
-      let mensajenumero = document.querySelector("#NumeroT");
-      mensajenumero.innerText = tarjeta;
+  if (maskify == "") {
+    mensajenumero.innerText = "xxxx xxxx xxxxx xxxx";
+  }
+});
 
-      if (tarjeta == "") {
-        mensajenumero.innerText = "xxxx xxxx xxxxx xxxx";
-        
-      }
-    });
 // Nombre  
 
-    let InputNombre = document.querySelector("#Nombre")
-        InputNombre.addEventListener("keyup", function(){
-          
-        let Nombre = InputNombre.value;
-        let Mensajenombre = document.querySelector("#NombreDeUsuario");
-        Mensajenombre.innerText = Nombre;
+let InputNombre = document.querySelector("#Nombre")
+InputNombre.addEventListener("keyup", function () {
 
-        
-      
-        if (Nombre = "" ){
-          Mensajenombre.innerText = "Nombre y apellido";
-        }
-      });
+  let Nombre = InputNombre.value;
+  let Mensajenombre = document.querySelector("#NombreDeUsuario");
+  Mensajenombre.innerText = Nombre;
+
+  if (Nombre == "") {
+    Mensajenombre.innerText = "Nombre y apellido";
+  }
+});
 
 // Numero de identificacion
 
-       let InputDocumento = document.querySelector("#Documento")
-         InputDocumento.addEventListener("keyup", function(){
+let InputDocumento = document.querySelector("#Documento")
+InputDocumento.addEventListener("keyup", function () {
 
-         let Documento = InputDocumento.value;
-         let Mensajedocumento= document.querySelector("#NumeroDeDocumento");
-         Mensajedocumento.innerText = Documento;
-       });
+  let Documento = InputDocumento.value;
+  let Mensajedocumento = document.querySelector("#NumeroDeDocumento");
+  Mensajedocumento.innerText = Documento;
+});
 
-       if (Documento == ""){
-        Mensajedocumento.innerText = "Numero de documento";
-      }
-    
+if (Documento == "") {
+  Mensajedocumento.innerText = "Numero de documento";
+}
+
 // Codigo cvv 
 
-       let InputCVV = document.querySelector("#cvv");
-       InputCVV.addEventListener("keyup", function(){
-        let CVV= InputCVV.value;
-        let MensajeCVV= document.querySelector("#IngresoCVV");
-        MensajeCVV.innerText = CVV;
-      });
+let InputCVV = document.querySelector("#cvv");
+InputCVV.addEventListener("keyup", function () {
+  let CVV = InputCVV.value;
+  let MensajeCVV = document.querySelector("#IngresoCVV");
+  MensajeCVV.innerText = CVV;
+});
 
-      if (CVV== ""){
-       MensajeCVV.innerText = "CVV";
-     }
-
-    // ESPACIOS VACIOS 
-    
-// if (InputNumero.length || InputNombre.length || InputDocumento.length || InputCVV.length == 0){
-//   alert("campos vacios");
-      
-//     }
-
-  
-
-
-
-
+if (CVV == "") {
+  MensajeCVV.innerText = "CVV";}
+;
+        
 }
