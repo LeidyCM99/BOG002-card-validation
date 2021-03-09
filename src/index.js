@@ -75,8 +75,7 @@ function ObtenerNumero (){
   }
   console.log (listaPares);
 
-// Sumar todos los dígitos
-
+  // Sumar todos los dígitos
   let array = listaPares.concat(listaImpares);
   console.log (array);
 
@@ -113,10 +112,9 @@ function ObtenerNumero (){
   BotonValidar.addEventListener("click", ObtenerNumero);
 
 
+// ESPACIOS VACIOS 
 
 
-
-// BOTON REDIRECCIONAR PANTALLA 2
 
 function Redireccionar () {
   window.open("https://open.spotify.com/show/4PW2LRsOMXqTE4vY6m0Mp7?si=SJags5c-TsWfPVbjI6LyZg");
