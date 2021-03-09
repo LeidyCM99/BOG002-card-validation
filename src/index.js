@@ -14,23 +14,6 @@ function Invalido(){
 function Ocultar () {
 document.getElementById("cajaPrincipal").style.display = "none";}
 
-// ESPACIOS VACIOS 
-
-// function validar()  {
-  
-  let Numerotarjeta = document.getElementById("InsertarNumeroTarjeta").value
-
-// if (Numerotarjeta == ""){
-//     alert("Debes llenar el campo");
-//        let deshabilitar= BotonValidar.addEventListener("click", ObtenerNumero);
-//           deshabilitar.disable = true;
-//   return false
-
-
-// }
-
-
-
 // OBTENER DATOS 
 
 function ObtenerNumero (){
@@ -94,18 +77,11 @@ function ObtenerNumero (){
   //             deshabilitar.disable = true;
   //     return false
     
-  
-
-  
+   
   }    
  
-
-
   let BotonValidar = document.getElementById("ValidarTarjeta");
   BotonValidar.addEventListener("click", ObtenerNumero);
-
-
-// ESPACIOS VACIOS 
 
 // BOTÓN REDIRECCIONAR PANTALLA 2
 
@@ -185,5 +161,20 @@ if (CVV == "") {
   MensajeCVV.innerText = "CVV";
 }
 ;
+
+// ESPACIOS VACIOS 
+
+// function validar()  {
+  
+  let Numerotarjeta = document.getElementById("InsertarNumeroTarjeta").value
+
+// if (Numerotarjeta == ""){
+//     alert("Debes llenar el campo");
+//        let deshabilitar= BotonValidar.addEventListener("click", ObtenerNumero);
+//           deshabilitar.disable = true;
+//   return false
+
+
+// }
         
          
