@@ -16,6 +16,7 @@ document.getElementById("cajaPrincipal").style.display = "none";}
 
 // OBTENER DATOS 
 
+
 function ObtenerNumero (){
   let numero = document.getElementById("InsertarNumeroTarjeta").value;
 
@@ -40,17 +41,13 @@ function ObtenerNumero (){
     
   } 
  
-  // else if  (Numerotarjeta == ""){
-  //       alert("Debes llenar el campo");
-  //          let deshabilitar= BotonValidar.addEventListener("click", ObtenerNumero);
-  //             deshabilitar.disable = true;
-  //     return false
-    
+
    
-  }    
+  }
  
   let BotonValidar = document.getElementById("ValidarTarjeta");
-  BotonValidar.addEventListener("click", ObtenerNumero);
+  BotonValidar.addEventListener("click" , ObtenerNumero);
+  
 
 // BOTÓN REDIRECCIONAR PANTALLA 2
 
@@ -113,39 +110,31 @@ InputDocumento.addEventListener("keyup", function () {
   let Documento = InputDocumento.value;
   let Mensajedocumento = document.querySelector("#NumeroDeDocumento");
   Mensajedocumento.innerText = Documento;
-});
 
-if (Documento == "") {
+
+if (Documento== "") {
   Mensajedocumento.innerText = "Numero de documento";
-}
+}});
 
 // Codigo cvv 
 
 let InputCVV = document.querySelector("#cvv");
-InputCVV.addEventListener("keyup", function () {
+  InputCVV.addEventListener("keyup", function () {
   let CVV = InputCVV.value;
   let MensajeCVV = document.querySelector("#IngresoCVV");
-  MensajeCVV.innerText = CVV;
-});
+  MensajeCVV.textContent = CVV;
+
 
 if (CVV == "") {
-  MensajeCVV.innerText = "CVV";}
-;
+  MensajeCVV.textContent = "CVV";}});
+
 
 // ESPACIOS VACIOS 
 
 // function validar()  {
   
-  let Numerotarjeta = document.getElementById("InsertarNumeroTarjeta").value
-
-// if (Numerotarjeta == ""){
-//     alert("Debes llenar el campo");
-//        let deshabilitar= BotonValidar.addEventListener("click", ObtenerNumero);
-//           deshabilitar.disable = true;
-//   return false
 
 
-// }
 function isValid(NumeroDeTarjeta){ 
   // Separar los numeros e invertirlos
   let separar= NumeroDeTarjeta.split("").reverse();
@@ -210,5 +199,5 @@ function isValid(NumeroDeTarjeta){
           
           return enmascarado;
          
-        };
+        }
       

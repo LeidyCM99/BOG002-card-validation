@@ -91,7 +91,7 @@ body{
    
 
 }
-#NombreDeUsuario{
+#NombreDeUsuario, #NombreDeUsuarioI{
     position:absolute;
     top:230px;
     left: 25px;
@@ -101,17 +101,19 @@ body{
     text-overflow:ellipsis;
     overflow: hidden;
     
-}
-#IngresoCVV{
-    position:absolute;
-    top: 170px;
-    left: 25px;
     
 }
-#NumeroDeDocumento{
+
+#IngresoCVV, #IngresoCVVI{
     position:absolute;
     top: 185px;
-    left: 75px;
+    left: 45px;
+    
+}
+#NumeroDeDocumento, #NumeroDeDocumentoI{
+    position:absolute;
+    top: 185px;
+    left: 95px;
     display: inline;
     
 }
@@ -128,12 +130,22 @@ body{
 .input{
     padding: 10px;
     width: 300px;
-    background-color: none;
-    margin: auto;
+    background-color: #03C7CF;
+    margin: 8px;
     display: block;
     text-align: center;
-    border-radius: 5px;
-    margin: 15px;
+    border-radius: 10px;
+    margin: none;
+    color: white;
+    text-transform:capitalize;
+ }
+ ::placeholder{
+     color: white;
+     font-weight: bold;
+     text-transform:capitalize;
+ }
+ .campos{
+     border: none;
  }
 
  /* ESTILO PAGINA TARJETA VALIDA */
