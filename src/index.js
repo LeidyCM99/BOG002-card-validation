@@ -9,7 +9,7 @@ function Mostrar(){
   document.getElementById("cajavalido").style.display = "block";}
 
 function Invalido(){
-  document.getElementById("cajaInvalido").style.display = "block";}
+  document.getElementById("cajaInvalido").style.display = "block";
 
 function Ocultar () {
 document.getElementById("cajaPrincipal").style.display = "none";}
@@ -19,6 +19,7 @@ document.getElementById("cajaPrincipal").style.display = "none";}
 
 function ObtenerNumero (){
   let numero = document.getElementById("InsertarNumeroTarjeta").value;
+
 
   let ResutadoIsValid = isValid(numero); 
 
@@ -32,21 +33,22 @@ function ObtenerNumero (){
     Invalido();
     Ocultar ();
     
+    
     let mensajenumero = document.querySelector("#TextoTarjeta");
     let Guardando = Maskify(numero);
     mensajenumero.textContent = Guardando;
- 
-
     alert("numero invalido")
-    
-  } 
+  }   
+  
+     
  
 
-   
-  }
+    // alert("numero invalido")
+}
  
   let BotonValidar = document.getElementById("ValidarTarjeta");
-  BotonValidar.addEventListener("click" , ObtenerNumero);
+  BotonValidar.addEventListener("click", ObtenerNumero);
+
   
 
 // BOTÓN REDIRECCIONAR PANTALLA 2
@@ -90,7 +92,7 @@ InputNumero.addEventListener("keyup", function ()
 
 // Nombre  
 
-let InputNombre = document.querySelector("#Nombre")
+let InputNombre = document.querySelector("#Nombre").value
 InputNombre.addEventListener("keyup", function () {
 
   let Nombre = InputNombre.value;
@@ -104,7 +106,7 @@ InputNombre.addEventListener("keyup", function () {
 
 // Numero de identificacion
 
-let InputDocumento = document.querySelector("#Documento")
+let InputDocumento = document.querySelector("#Documento");
 InputDocumento.addEventListener("keyup", function () {
 
   let Documento = InputDocumento.value;
@@ -122,18 +124,18 @@ let InputCVV = document.querySelector("#cvv");
   InputCVV.addEventListener("keyup", function () {
   let CVV = InputCVV.value;
   let MensajeCVV = document.querySelector("#IngresoCVV");
-  MensajeCVV.textContent = CVV;
+  MensajeCVV.innerText = CVV;
 
 
 if (CVV == "") {
-  MensajeCVV.textContent = "CVV";}});
+  MensajeCVV.innerText = "CVV";}});
 
 
 // ESPACIOS VACIOS 
 
 // function validar()  {
   
-
+  // let Numerotarjeta = document.getElementById("InsertarNumeroTarjeta").value
 
 function isValid(NumeroDeTarjeta){ 
   // Separar los numeros e invertirlos
@@ -192,12 +194,11 @@ function isValid(NumeroDeTarjeta){
 }
       function Maskify (Numero){
 
-        
-          
+      
           let ultimoDigito = Numero.slice(-4);
           let enmascarado = "#### #### #### " + ultimoDigito;
           
           return enmascarado;
          
         }
-      
+}
