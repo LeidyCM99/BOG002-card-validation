@@ -68,11 +68,9 @@ BotonRegresar.addEventListener("click", Regresar);
 
 let InputNumero = document.querySelector("#InsertarNumeroTarjeta");
 
-InputNumero.addEventListener("keyup", function ()
-{
-
+InputNumero.addEventListener("keyup", function (){
   let InputTarjeta = document.querySelector("#InsertarNumeroTarjeta").value;
-  let Guardando=Maskify(InputTarjeta);
+  let Guardando = Maskify(InputTarjeta);
   
   let mensajenumero = document.querySelector("#NumeroT");
   mensajenumero.innerText = Guardando;
@@ -119,7 +117,7 @@ InputCVV.addEventListener("keyup", function () {
   MensajeCVV.innerText = CVV;
 });
 
-if (CVV == "") {
+if (InputCVV == "") {
   MensajeCVV.innerText = "CVV";}
 
 
