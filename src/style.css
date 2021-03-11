@@ -33,6 +33,7 @@ body{
     position: absolute;
     top: 90px;
     right: 290px;
+    display: none;
 
 }
 .credit {
@@ -258,4 +259,104 @@ body{
    top: 35px;
    width: 30px; height:30px;
 
+}
+/* ESTILO PÁGINA COMPRAS */
+#cajaCompras {
+    /* display: none;  */
+    background-color: rgb(255, 255, 255);
+    height: 530px; width: 870px;
+    border-radius: 20px;
+    position: absolute;
+    top: 90px;
+    right: 310px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: left;
+
+}
+.slider{
+    position: absolute;
+    top: 75px;
+    right: 340px;
+
+}
+ul.slider li {
+    opacity: 0; /*Ocultamos todos los <li>*/
+    transition: opacity .5s;
+    position: absolute; /*Posicionamos en absoluto los <li>*/
+    left: 0px;
+    top: 0px;
+  
+}
+ul.slider li:first-child {
+    opacity: 1; /*Mostramos el primer <li>*/
+}
+ul.slider li:target {
+    opacity: 1; /*Mostramos el <li> al que apunta el enlace*/
+}
+nav {
+    position: absolute;
+    top:385px;
+    right: 23px;
+    font-size: 17px;
+}
+nav a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #df79a0;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.ImagenesSlider{
+    width: 320px; 
+    height: 320px;
+}
+
+#BotonSlide{
+    background-color: #fcefe7;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding: 8px;
+    border-color: white;
+}
+
+#Invitacion{
+    margin-top: 110px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color: black;
+    margin-right: 415px;
+    margin-left: 25px;    
+}
+
+#Temastxt{
+    margin-top: -330px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    color: #df79a0;
+    margin-right: 20px;
+    margin-left: 450px;
+}
+
+#Parrafo{
+    margin-top: 30px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: #000000;
+    margin-right: 440px;
+    margin-left: 45px;
+}
+#ContinuarCompra {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    border-radius: 30px;
+    padding: 10px;
+    position: absolute;
+    top: 465px;
+    right: 295px;
 }

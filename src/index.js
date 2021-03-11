@@ -14,39 +14,31 @@ function Invalido(){
 function Ocultar () {
 document.getElementById("cajaPrincipal").style.display = "none";}
 
+function OcultarCompras(){
+  document.getElementById("cajaCompras").style.display = "none";
+  document.getElementById("cajaPrincipal").style.display = "block";}
+  let BotonContinuar = document.getElementById("ContinuarCompra");
+  BotonContinuar.addEventListener("click", OcultarCompras);
+
 // OBTENER DATOS 
 
 function ObtenerNumero (){
   let numero = document.getElementById("InsertarNumeroTarjeta").value;
-
   let ResutadoIsValid = isValid(numero); 
-
   if (ResutadoIsValid) {
     Mostrar ();
     Ocultar ();
-    
   } 
   else  {
     // añadir el numero a la tarjeta en pantalla
     Invalido();
     Ocultar ();
-    
     let mensajenumero = document.querySelector("#TextoTarjeta");
     let Guardando = Maskify(numero);
     mensajenumero.textContent = Guardando;
- 
-
     alert("numero invalido")
-    
   } 
- 
-  // else if  (Numerotarjeta == ""){
-  //       alert("Debes llenar el campo");
-  //          let deshabilitar= BotonValidar.addEventListener("click", ObtenerNumero);
-  //             deshabilitar.disable = true;
-  //     return false
-    
-   
+
   }    
  
   let BotonValidar = document.getElementById("ValidarTarjeta");
@@ -60,12 +52,11 @@ function Redireccionar () {
 let BotonRedireccionar = document.getElementById("Redireccionar");
 BotonRedireccionar.addEventListener("click", Redireccionar);
 
-
 // BOTON ATRÁS PANTALLA 3
 
 function Regresar () {
   document.getElementById("cajaInvalido").style.display = "none";
-  document.getElementById("cajaPrincipal").style.display = "block"
+  document.getElementById("cajaPrincipal").style.display = "block";
 }
 let BotonRegresar = document.getElementById("atras");
 BotonRegresar.addEventListener("click", Regresar);
@@ -130,22 +121,10 @@ InputCVV.addEventListener("keyup", function () {
 
 if (CVV == "") {
   MensajeCVV.innerText = "CVV";}
-;
-
-// ESPACIOS VACIOS 
-
-// function validar()  {
-  
-  let Numerotarjeta = document.getElementById("InsertarNumeroTarjeta").value
-
-// if (Numerotarjeta == ""){
-//     alert("Debes llenar el campo");
-//        let deshabilitar= BotonValidar.addEventListener("click", ObtenerNumero);
-//           deshabilitar.disable = true;
-//   return false
 
 
-// }
+//FUNCIÓN ISVALID
+
 function isValid(NumeroDeTarjeta){ 
   // Separar los numeros e invertirlos
   let separar= NumeroDeTarjeta.split("").reverse();
@@ -194,21 +173,31 @@ function isValid(NumeroDeTarjeta){
 
   // Mostrar pantallas dependiendo del resultado
   if (validacion == 0) {  return true;
-    
   } 
   else { return false;
-    
   } 
 
 }
-      function Maskify (Numero){
 
-        
-          
-          let ultimoDigito = Numero.slice(-4);
-          let enmascarado = "#### #### #### " + ultimoDigito;
-          
-          return enmascarado;
-         
-        };
-      
+function Maskify(Numero) {
+
+  let ultimoDigito = Numero.slice(-4);
+  let enmascarado = "#### #### #### " + ultimoDigito;
+
+  return enmascarado;
+}
+
+// ESPACIOS VACIOS 
+
+// function validar()  {
+  
+  // let Numerotarjeta = document.getElementById("InsertarNumeroTarjeta").value
+
+// if (Numerotarjeta == ""){
+//     alert("Debes llenar el campo");
+//        let deshabilitar= BotonValidar.addEventListener("click", ObtenerNumero);
+//           deshabilitar.disable = true;
+//   return false
+
+
+// }
