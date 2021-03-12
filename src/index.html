@@ -48,7 +48,7 @@
       
       <h1> TARJETA DE CREDITO</h1> 
       <fieldset class="campos">
-        <input  class="input" id="InsertarNumeroTarjeta" type="text"  pattern="[0-9]+" minlength= "15" maxlength="16" placeholder="Numero de tarjeta"  title="Es obligatorio que ingreses tu numero de tarjeta" required > 
+        <input  class="input" id="InsertarNumeroTarjeta" type="text"  pattern="[0-9]+" minlength= "16" maxlength="16" placeholder="Numero de tarjeta"  title="Es obligatorio que ingreses tu numero de tarjeta" required > 
         <input  class="input" id="Nombre" type="text"  placeholder="Nombre y apellido" minlength= "5" maxlength="30" title="Es obligatorio que ingreses tu nombre" required > 
         <input  class="input" id="Documento" type="text" pattern="[0-9]+" placeholder="Numero de documento" title="Es obligatorio que ingreses tu numero de documento" required > 
         <input  class="input" id="cvv" type="text" pattern="[0-9]+" minlength= "3" maxlength="3" placeholder="ingrese cvv" title="Es obligatorio que ingreses codigo CVV"  required > 
@@ -60,20 +60,20 @@
         <input type="submit" id="ValidarTarjeta" value="SIGUIENTE" >
       </fieldset>
     </form>
-
-   
-</main>
 <!-- VISUALIZACION DE LA TARJETA DEL USUARIO  -->
+    <div class="tarjeta">
+      <div class=" Datos" id="Datos">
+        <img src="logo.png" class="logo">
+        <div id="NumeroT"> #### #### #### #### </div> 
+        <div id="NombreDeUsuario"> Nombre y apellido  </div>
+        <div id="NumeroDeDocumento">  Numero de documento </div>
+        <div id="IngresoCVV">  CVV </div>
+      </div>
+    </div>
+</main>
 
-<div class="tarjeta">
-  <div class=" Datos" id="Datos">
-    <img src="logo.png" class="logo">
-    <div id="NumeroT"> #### #### #### #### </div> 
-    <div id="NombreDeUsuario"> Nombre y apellido  </div>
-    <div id="NumeroDeDocumento">  Numero de documento </div>
-    <div id="IngresoCVV">  CVV </div>
-  </div>
-</div>
+
+
 
 <!-- PANTALLA 2 VALIDO -->
 <main>

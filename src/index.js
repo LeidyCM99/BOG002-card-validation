@@ -9,7 +9,7 @@ function Mostrar(){
   document.getElementById("cajavalido").style.display = "block";}
 
 function Invalido(){
-  document.getElementById("cajaInvalido").style.display = "block";
+  document.getElementById("cajaInvalido").style.display = "block";}
 
 function Ocultar () {
 document.getElementById("cajaPrincipal").style.display = "none";}
@@ -17,12 +17,14 @@ document.getElementById("cajaPrincipal").style.display = "none";}
 function OcultarCompras(){
   document.getElementById("cajaCompras").style.display = "none";
   document.getElementById("cajaPrincipal").style.display = "block";}
+
   let BotonContinuar = document.getElementById("ContinuarCompra");
   BotonContinuar.addEventListener("click", OcultarCompras);
 
 // OBTENER DATOS 
 
-function ObtenerNumero (){
+function ObtenerNumero (event){
+  event.preventDefault()
   let numero = document.getElementById("InsertarNumeroTarjeta").value;
   let ResutadoIsValid = isValid(numero); 
   if (ResutadoIsValid) {
@@ -32,7 +34,7 @@ function ObtenerNumero (){
   else  {
     // añadir el numero a la tarjeta en pantalla
     Invalido();
-    Ocultar ();
+    Ocultar (); 
     let mensajenumero = document.querySelector("#TextoTarjeta");
     let Guardando = Maskify(numero);
     mensajenumero.textContent = Guardando;
@@ -41,8 +43,8 @@ function ObtenerNumero (){
 
   }    
  
-  let BotonValidar = document.getElementById("ValidarTarjeta");
-  BotonValidar.addEventListener("click", ObtenerNumero);
+  let BotonValidar = document.getElementById("form");
+  BotonValidar.addEventListener("submit", ObtenerNumero);
 
 // BOTÓN REDIRECCIONAR PANTALLA 2
 
@@ -84,7 +86,7 @@ InputNumero.addEventListener("keyup", function ()
 
 // Nombre  
 
-let InputNombre = document.querySelector("#Nombre").value
+let InputNombre = document.querySelector("#Nombre");
 InputNombre.addEventListener("keyup", function () {
 
   let Nombre = InputNombre.value;
@@ -201,4 +203,4 @@ function Maskify(Numero) {
 
 
 //
-}
+

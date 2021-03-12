@@ -66,10 +66,10 @@ body{
     width: 397px; height: 278px;
     border-radius: 30px;
     position: absolute;
-    top: 200px;
-    left: 380px;
+    top: 150px;
+    right: 450px;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif; 
     font-size: 15px;
     text-align: center;
     box-shadow: 5px 5px 10px 5px #999;
@@ -144,10 +144,10 @@ body{
     text-align: center;
     border-radius: 10px;
     border: white;
-    color: white;
     outline: rgb(230, 221, 221);
     text-transform:capitalize;
     box-shadow: 2px 2px 5px #999;
+    font-weight: bold;
  }
  #Documento{
     padding: 10px;
@@ -161,7 +161,7 @@ body{
     outline: none;
     padding: 10px;
     width: 80px;
-    background-color:  #03c8cfd7;
+    background-color:   #adfbfd;
     margin: 8px;
     display: inline;
     text-align: center;
@@ -244,8 +244,8 @@ body{
 }
  .tarjetaInvalida{
     width: 397px; height: 278px;
-    top: 30px;
-    right: 135px;
+    top: 150px;
+    right: 400px;
     border-radius: 30px;
     background:radial-gradient( circle at 33% 100%,
     #f3aed4 4%, #F392b5 30%, #d92e7f 62%, #515ecf);
@@ -253,7 +253,7 @@ body{
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     box-shadow: 5px 5px 10px #999;
-    display: none;
+    display: block;
     
  }
 
@@ -354,12 +354,14 @@ body{
     right: 310px;
     font-family:Arial, Helvetica, sans-serif;
     text-align: left;
+    box-shadow: 5px 5px 10px 5px #999;
 
 }
 .slider{
     position: absolute;
     top: 75px;
     right: 340px;
+  
 
 }
 ul.slider li {
@@ -368,19 +370,23 @@ ul.slider li {
     position: absolute; /*Posicionamos en absoluto los <li>*/
     left: 0px;
     top: 0px;
+    border-radius: 5px;
   
 }
 ul.slider li:first-child {
     opacity: 1; /*Mostramos el primer <li>*/
+    
 }
 ul.slider li:target {
     opacity: 1; /*Mostramos el <li> al que apunta el enlace*/
+ 
 }
 nav {
     position: absolute;
     top:385px;
     right: 23px;
     font-size: 17px;
+    
 }
 nav a {
     font-family: Arial, Helvetica, sans-serif;
@@ -388,18 +394,29 @@ nav a {
     font-size: 15px;
     font-weight: bold;
 }
+#BotonSlide:hover {
+    background: pink;
+}
 
+#BotonSlide:active {
+    background: pink;
+    color: white;
+}
 .ImagenesSlider{
     width: 320px; 
     height: 320px;
 }
 
 #BotonSlide{
+   
     background-color: #fcefe7;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
     padding: 8px;
     border-color: white;
+    box-shadow: 5px 5px 5px #999;
+   
+
 }
 
 #Invitacion{
