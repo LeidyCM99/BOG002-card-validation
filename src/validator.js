@@ -52,7 +52,8 @@ function isValid(NumeroDeTarjeta) {
   if (validacion === 0) {
     return true;
   }
-  else { return false; }
+  
+  return false;
 
 }
 
@@ -63,6 +64,10 @@ function maskify(Numero) {
 
   return enmascarado;
 }
+
+// tienes telegram? no
+// entonces te llamo por hangouts
+// tacho la descargo
 
 
 export default validator;
