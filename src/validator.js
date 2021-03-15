@@ -1,6 +1,6 @@
 const validator = {
 
-  isValid, Maskify,};
+  isValid, maskify,};
 
 function isValid(NumeroDeTarjeta) {
   // Separar los numeros e invertirlos
@@ -49,14 +49,14 @@ function isValid(NumeroDeTarjeta) {
   // console.log( validacion);
 
   // Mostrar pantallas dependiendo del resultado
-  if (validacion == 0) {
+  if (validacion === 0) {
     return true;
   }
   else { return false; }
 
 }
 
-function Maskify(Numero) {
+function maskify(Numero) {
 
   let ultimoDigito = Numero.slice(-4);
   let enmascarado = "#### #### #### " + ultimoDigito;
