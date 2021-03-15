@@ -33,11 +33,11 @@ describe('validator', () => {
       expect(typeof validator.maskify('455636460793561')).toBe('############5616')
     });
 
-    it.skip('Debería retornar "1" para "1"', () => {
+    it('Debería retornar "1" para "1"', () => {
       expect(typeof validator.maskify('1')).toBe('1')
     });
 
-    it.skip('Debería retornar "######orld" para "helloworld"', () => {
+    it('Debería retornar "######orld" para "helloworld"', () => {
       expect(typeof validator.maskify("helloworld")).toBe("######orld")
     });
   });
