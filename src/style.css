@@ -10,10 +10,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 body{
     background-color: #F9EDE1;
-   
 }
+
 .caja1{
-    
     background-color: white;
     width: 250px; height: 45px;
     position: absolute;
@@ -23,27 +22,28 @@ body{
     font-family:Arial, Helvetica, sans-serif;
     font-size: 10px;
     text-align: center;
-
+    box-shadow: 5px 5px 10px #999
 }
 
 .cajaPrincipal {
     background-color: rgb(255, 255, 255);
     height: 524px; width: 647px;
-    border-radius: 20px;
-    position: absolute;
     top: 90px;
     right: 290px;
+    border-radius: 20px;
+    position: absolute;
+    box-shadow: 5px 5px 10px 10px #999;
     display: none;
-
 }
+
 .credit {
     display: inline block;
     position: absolute;
     left: 350px;
     top: 35px;
     width: 100px; height:100px;
- 
- }
+}
+
 #ValidarTarjeta {
     background-color: black;
     color: white;
@@ -54,7 +54,6 @@ body{
     position: absolute;
     top: 320px;
     right: 60px;
-
 }
 
 .tarjeta {
@@ -64,23 +63,24 @@ body{
     border-radius: 30px;
     position: absolute;
     top: 130px;
-    right: 450px;
+    right: 465px;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     text-align: center;
-   
-  
-   
+    box-shadow: 5px 5px 10px 5px #999;
+    display: fixed;
+    z-index:2;
 }
+
 .logo{
     width: 55px; height: 45px;
     position: absolute;
     top: 40px;
     right: 270px;
-    border-radius: 10px;
-    
+    border-radius: 10px;   
 }
+
 #NumeroT, #NumeroTI {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 35px;
@@ -89,9 +89,8 @@ body{
     left: 30px;
     top: 110px;
   -webkit-appearance: none; 
-   
-
 }
+
 #NombreDeUsuario, #NombreDeUsuarioI{
     position:absolute;
     top:230px;
@@ -100,16 +99,13 @@ body{
     text-transform: uppercase;
     width: 250px; height: 20px;
     text-overflow:ellipsis;
-    overflow: hidden;
-    
-    
+    overflow: hidden;  
 }
 
 #IngresoCVV, #IngresoCVVI{
     position:absolute;
     top: 185px;
     left: 45px;
-    
 }
 #NumeroDeDocumento, #NumeroDeDocumentoI{
     position:absolute;
@@ -128,6 +124,8 @@ body{
     margin-top: 30px;
 }
 /* ESTILO EN DONDE SE DILIGENCIAN LOS DATOS */
+
+
 .input{
     padding: 10px;
     width: 300px;
@@ -136,10 +134,38 @@ body{
     display: block;
     text-align: center;
     border-radius: 10px;
+    border: white;
+    color: rgb(0, 0, 0);
+    outline: rgb(230, 221, 221);
+    text-transform:capitalize;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px #999;
+ }
+ #Documento{
+    padding: 10px;
+    width: 200px;
+    position: absolute;
+    left: 110px;
+    top:230px ;
+ }
+ .select{
+    border: white;
+    outline: none;
+    padding: 10px;
+    width: 80px;
+    background-color:  #adfbfd;
+    margin: 8px;
+    display: inline;
+    text-align: center;
+    border-radius: 10px;
     margin: none;
     color: rgb(0, 0, 0);
     font-weight: bold;
     text-transform:capitalize;
+    position: absolute;
+    top: 230px;
+    left: 12px;
+
  }
  ::placeholder{
      color: rgb(0, 0, 0);
@@ -154,20 +180,32 @@ body{
 #cajavalido {
     display: none; 
     background-color: rgb(255, 255, 255);
-    height: 530px; width: 680px;
     border-radius: 20px;
     position: absolute;
+    height: 524px; width: 647px;
     top: 90px;
-    right: 390px;
+    right: 290px;
     font-family:Arial, Helvetica, sans-serif;
     text-align: center;
 
 }
+#textV{  
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    position: absolute;
+    top: 250px;
+    left: 250px;
+    width: 250px; height:50px;
+    color: rgb(131, 194, 37);
+   
+
+}
 #imagen2 {
-    width: 250px; height: 250px;
+    width: 200px; height: 200px;
     position: relative;
     top: 40px;
-    margin-bottom: 40px;
+    left: 70px;
    
 }
 #Redireccionar {
@@ -178,8 +216,9 @@ body{
     border-radius: 30px;
     padding: 10px;
     position: absolute;
-    top: 400px;
+    top: 450px;
     right: 150px;
+    border: none;
 }
 
 /* ESTILO PAGINA TARJETA INVALIDA */
@@ -191,31 +230,53 @@ body{
     border-radius: 20px;
     position: absolute;
     top: 90px;
-    right: 390px;;
+    right: 390px;
+    box-shadow: 5px 5px 10px #999;
     
 }
  .tarjetaInvalida{
     width: 397px; height: 278px;
+    top: 120px;
+    right: 480px;
     border-radius: 30px;
     background:radial-gradient( circle at 33% 100%,
     #f3aed4 4%, #F392b5 30%, #d92e7f 62%, #515ecf);
     position: absolute;
-    top: 30px;
-    right: 135px;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 5px 5px 10px #999;
+    display: block;
     
  }
 
 #text{
     font-family:Arial, Helvetica, sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
-    color: red;
+    color:white;
+    background-color: rgb(255, 0, 0);
     position: absolute;
-    top: 370px;
-    left: 115px;
+    top: 90px;
+    left: 350px;
+    margin-top:10px;
+    padding: 10px;
     z-index: 4;
+    width: 270px; height:50px;
+    border-radius: 16px;
+
+}
+#textInvalid{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    color:rgb(0, 0, 0);
+    position: absolute;
+    top: 200px;
+    left: 350px;
+    padding: 10px;
+    z-index: 4;
+    width: 250px; height:50px;
+    border-radius: 16px;
 }
 /* Botón atrás */
 #atras {
@@ -228,13 +289,14 @@ body{
     position: absolute;
     top: 450px;
     right: 295px;
+    border: none;
 }
 /* imagen de invalido  */
  #invalido{
     width: 50px; height:50px;
     position: absolute;
     top: 330px;
-    left: 320px;
+    left: 450px;
 
  }
 
