@@ -10,10 +10,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 body{
     background-color: #F9EDE1;
-   
 }
+
 .caja1{
-    
     background-color: white;
     width: 250px; height: 45px;
     position: absolute;
@@ -24,8 +23,6 @@ body{
     font-size: 10px;
     text-align: center;
     box-shadow: 5px 5px 10px #999
-
-
 }
 
 .cajaPrincipal {
@@ -37,16 +34,16 @@ body{
     position: absolute;
     box-shadow: 5px 5px 10px 10px #999;
     display: none;
-
 }
+
 .credit {
     display: inline block;
     position: absolute;
     left: 350px;
     top: 35px;
     width: 100px; height:100px;
- 
- }
+}
+
 #ValidarTarjeta {
     background-color: black;
     color: white;
@@ -57,7 +54,6 @@ body{
     position: absolute;
     top: 320px;
     right: 60px;
-
 }
 
 .tarjeta {
@@ -66,27 +62,26 @@ body{
     width: 397px; height: 278px;
     border-radius: 30px;
     position: absolute;
-    top: 150px;
-    right: 450px;
+    top: 130px;
+    right: 465px;
     color: white;
     font-family: Arial, Helvetica, sans-serif; 
     font-size: 15px;
     text-align: center;
     box-shadow: 5px 5px 10px 5px #999;
     display: fixed;
-    z-index:2
-  
-   
+    z-index:2;
 }
+
 .logo{
     width: 55px; height: 45px;
     position: absolute;
     top: 40px;
     right: 270px;
-    border-radius: 10px;
-    
+    border-radius: 10px;   
 }
-#NumeroT, #NumeroTI {
+
+#NumeroT, .NumeroTI {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 35px;
     color: white;
@@ -94,10 +89,9 @@ body{
     left: 30px;
     top: 110px;
   -webkit-appearance: none; 
-   
-
 }
-#NombreDeUsuario, #NombreDeUsuarioI{
+
+#NombreDeUsuario, .NombreDeUsuarioI{
     position:absolute;
     top:230px;
     left: 25px;
@@ -105,18 +99,15 @@ body{
     text-transform: uppercase;
     width: 250px; height: 20px;
     text-overflow:ellipsis;
-    overflow: hidden;
-    
-    
+    overflow: hidden;  
 }
 
-#IngresoCVV, #IngresoCVVI{
+#IngresoCVV, .IngresoCVVI{
     position:absolute;
     top: 185px;
     left: 45px;
-    
 }
-#NumeroDeDocumento, #NumeroDeDocumentoI{
+#NumeroDeDocumento,.NumeroDeDocumentoI{
     position:absolute;
     top: 185px;
     left: 95px;
@@ -144,8 +135,10 @@ body{
     text-align: center;
     border-radius: 10px;
     border: white;
+    color: rgb(0, 0, 0);
     outline: rgb(230, 221, 221);
     text-transform:capitalize;
+    font-weight: bold;
     box-shadow: 2px 2px 5px #999;
     font-weight: bold;
  }
@@ -161,7 +154,7 @@ body{
     outline: none;
     padding: 10px;
     width: 80px;
-    background-color:   #adfbfd;
+    background-color:  #adfbfd;
     margin: 8px;
     display: inline;
     text-align: center;
@@ -244,8 +237,8 @@ body{
 }
  .tarjetaInvalida{
     width: 397px; height: 278px;
-    top: 150px;
-    right: 400px;
+    top: 120px;
+    right: 480px;
     border-radius: 30px;
     background:radial-gradient( circle at 33% 100%,
     #f3aed4 4%, #F392b5 30%, #d92e7f 62%, #515ecf);
@@ -269,7 +262,7 @@ body{
     margin-top:10px;
     padding: 10px;
     z-index: 4;
-    width: 250px; height:50px;
+    width: 270px; height:50px;
     border-radius: 16px;
 
 }
@@ -394,11 +387,11 @@ nav a {
     font-size: 15px;
     font-weight: bold;
 }
-#BotonSlide:hover {
+.BotonSlide:hover {
     background: pink;
 }
 
-#BotonSlide:active {
+.BotonSlide:active {
     background: pink;
     color: white;
 }
@@ -407,7 +400,7 @@ nav a {
     height: 320px;
 }
 
-#BotonSlide{
+.BotonSlide{
    
     background-color: #fcefe7;
     font-family: Arial, Helvetica, sans-serif;

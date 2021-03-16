@@ -26,17 +26,20 @@ function OcultarCompras(){
 function ObtenerNumero (event){
   event.preventDefault()
   let numero = document.getElementById("InsertarNumeroTarjeta").value;
-  let ResutadoIsValid = isValid(numero); 
+  let ResutadoIsValid = validator.isValid(numero); 
   if (ResutadoIsValid) {
     Mostrar ();
     Ocultar ();
+    let mensajenumero = document.querySelector("#TextoValido");
+    let Guardando = validator.maskify(numero);
+    mensajenumero.textContent = Guardando;
   } 
   else  {
     // añadir el numero a la tarjeta en pantalla
     Invalido();
     Ocultar (); 
     let mensajenumero = document.querySelector("#TextoTarjeta");
-    let Guardando = Maskify(numero);
+    let Guardando = validator.maskify(numero);
     mensajenumero.textContent = Guardando;
     alert("numero invalido")
   } 
@@ -70,11 +73,9 @@ BotonRegresar.addEventListener("click", Regresar);
 
 let InputNumero = document.querySelector("#InsertarNumeroTarjeta");
 
-InputNumero.addEventListener("keyup", function ()
-{
-
+InputNumero.addEventListener("keyup", function (){
   let InputTarjeta = document.querySelector("#InsertarNumeroTarjeta").value;
-  let Guardando=Maskify(InputTarjeta);
+  let Guardando = validator.maskify(InputTarjeta);
   
   let mensajenumero = document.querySelector("#NumeroT");
   mensajenumero.innerText = Guardando;
@@ -106,11 +107,13 @@ InputDocumento.addEventListener("keyup", function () {
   let Documento = InputDocumento.value;
   let Mensajedocumento = document.querySelector("#NumeroDeDocumento");
   Mensajedocumento.innerText = Documento;
+
+  if (Documento == "") {
+    Mensajedocumento.innerText = "Numero de documento";
+  }
 });
 
-if (Documento == "") {
-  Mensajedocumento.innerText = "Numero de documento";
-}
+
 
 // Codigo cvv 
 
@@ -119,27 +122,9 @@ InputCVV.addEventListener("keyup", function () {
   let CVV = InputCVV.value;
   let MensajeCVV = document.querySelector("#IngresoCVV");
   MensajeCVV.innerText = CVV;
+
+  if (InputCVV == "") {
+    MensajeCVV.innerText = "CVV";}
 });
 
-if (CVV == "") {
-  MensajeCVV.innerText = "CVV";}
-
-
-//FUNCIÓN ISVALID
-
-
-// ESPACIOS VACIOS 
-
-// function validar()  {
-  
-  // let Numerotarjeta = document.getElementById("InsertarNumeroTarjeta").value
-
-// if (Numerotarjeta == ""){
-//     alert("Debes llenar el campo");
-//        let deshabilitar= BotonValidar.addEventListener("click", ObtenerNumero);
-//           deshabilitar.disable = true;
-//   return false
-
-
-//
 
