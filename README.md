@@ -23,7 +23,7 @@ para ocultar todos los dígitos de la tarjeta ingresada menos los últimos 4.
 
 
 ## 2. Imagen final del proyecto
-![Aplicación pantalla 1](Pantalla1.png)
+![Aplicación pantalla 1](https://github.com/LeidyCM99/BOG002-card-validation/blob/main/src/Pantalla1.png)
 ![Aplicación pantalla 2](Pantalla2.png)
 ![Aplicación pantalla 3](Galeria5.jpg)
 
