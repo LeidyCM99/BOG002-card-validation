@@ -2,7 +2,6 @@ import validator from './validator.js';
 
 console.log(validator);
 
-
 // MOSTRAR PANTALLAS
 
 function Mostrar(){
@@ -41,9 +40,7 @@ function ObtenerNumero (event){
     let mensajenumero = document.querySelector("#TextoTarjeta");
     let Guardando = validator.maskify(numero);
     mensajenumero.textContent = Guardando;
-    alert("numero invalido")
-  } 
-
+    alert("numero invalido")} 
   }    
  
   let BotonValidar = document.getElementById("form");
@@ -66,7 +63,6 @@ function Regresar () {
 let BotonRegresar = document.getElementById("atras");
 BotonRegresar.addEventListener("click", Regresar);
 
-
 // // TARJETA DATOS 
 
 // Numero de la tarjeta 
@@ -81,8 +77,7 @@ InputNumero.addEventListener("keyup", function (){
   mensajenumero.innerText = Guardando;
 
   if (Guardando== "") {
-    mensajenumero.innerText = "xxxx xxxx xxxxx xxxx";
-  }
+    mensajenumero.innerText = "xxxx xxxx xxxxx xxxx";  }
 });
 
 // Nombre  
@@ -95,8 +90,7 @@ InputNombre.addEventListener("keyup", function () {
   Mensajenombre.innerText = Nombre;
 
   if (Nombre == "") {
-    Mensajenombre.innerText = "Nombre y apellido";
-  }
+    Mensajenombre.innerText = "Nombre y apellido";  }
 });
 
 // Numero de identificacion
@@ -109,11 +103,8 @@ InputDocumento.addEventListener("keyup", function () {
   Mensajedocumento.innerText = Documento;
 
   if (Documento == "") {
-    Mensajedocumento.innerText = "Numero de documento";
-  }
+    Mensajedocumento.innerText = "Numero de documento";  }
 });
-
-
 
 // Codigo cvv 
 
@@ -127,80 +118,6 @@ InputCVV.addEventListener("keyup", function () {
     MensajeCVV.innerText = "CVV";}
 });
 
-//    function isValid(NumeroDeTarjeta){ 
-//     // Separar los numeros e invertirlos
-//     let separar= NumeroDeTarjeta.split("").reverse();
-//     // console.log (separar);
-  
-//     // Obtener un nuevo array con las posiciones impares
-//     let numerosImpares = [] ;
-//     for (let i = 0; i < separar.length; i = i + 2){
-//       numerosImpares[i] = separar [i]
-//       // console.log(numerosImpares[i]);
-//       }
-      
-//     let listaImpares = numerosImpares.flatMap(x => [x * 1]);
-//     // console.log (listaImpares);
-  
-//     // Obtener un nuevo array con las posiciones pares
-//     let numerosPares = [];
-//     for (let i = 1; i < separar.length; i = i + 2){
-//       numerosPares[i] = separar [i];
-//       // console.log (numerosPares[i]);
-//     }
-     
-//     let listaPares =  numerosPares.flatMap(x => [x * 2]);
-//     // console.log (listaPares);
-  
-//     // Sumar el resultado si es de dos dígitos
-//     for (let i = 0; i < listaPares.length; i = i + 1){
-//       let elementoActual = listaPares[i]
-//       if (elementoActual > 9){
-//         let numeroDerecho = elementoActual % 10
-//         let numeroIzquierdo = parseInt(elementoActual / 10)
-//         listaPares[i] = numeroIzquierdo + numeroDerecho
-//       }
-//     }
-//     // console.log (listaPares);
-  
-//     // Sumar todos los dígitos
-//     let array = listaPares.concat(listaImpares);
-//     // console.log (array);
-  
-//     let resultado= array.reduce(function(a, b){ return a + b; });
-//     // console.log (resultado);
-  
-//     let validacion =resultado%10;
-//     // console.log( validacion);
-  
-//     // Mostrar pantallas dependiendo del resultado
-//     if (validacion == 0) {  return true;
-//     } 
-//     else { return false;} 
-
-// }
-
-//   function Maskify(Numero) {
-
-//     let ultimoDigito = Numero.slice(-4);
-//     let enmascarado = "#### #### #### " + ultimoDigito;
-  
-//     return enmascarado;
-//   }
 
 
-// ESPACIOS VACIOS 
-
-// function validar()  {
-  
-  // let Numerotarjeta = document.getElementById("InsertarNumeroTarjeta").value
-
-// if (Numerotarjeta == ""){
-//     alert("Debes llenar el campo");
-//        let deshabilitar= BotonValidar.addEventListener("click", ObtenerNumero);
-//           deshabilitar.disable = true;
-//   return false
-
-
-//
 
