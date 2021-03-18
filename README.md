@@ -5,10 +5,9 @@
 
 * [1. Resumen del Proyecto](#1-resumen-del-proyecto)
 * [2. Imagen final del proyecto](#2-imagen-final-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Pistas, tips y lecturas complementarias](#6-pistas-tips-y-lecturas-complementarias)
+* [3. Definición del producto](#3-definición-del-producto)
+* [4. Prototipo final](#4-prototipo-final)
+* [5. Objetivos de aprendizaje](#5-objetivos-de-aprendizaje)
 
 ***
 
@@ -31,12 +30,18 @@ para ocultar todos los dígitos de la tarjeta ingresada menos los últimos 4.
 
 ## 3. Definición del producto
 
-Actualmente las personas estan sumergidas en estres,  la cabeza saturada de información  o  sienten que hay un tema en el que no son su fuerte o por el contrario son su fuerte pero están interesados en aprender más, una forma  de sentirse mejor, liberarse, encontrar(se) es mediante un podcast.
+El producto diseñado va dirigido a los oyentes del podcast. De acuerdo con las estadísticas del público, sus principales oyentes son mujeres, representando un 76%, mientras que un 24% son hombres. El principal rango de edades es de los 20 a los 44 años de edad. La región geográfica predominante es Colombia, seguida por Estados Unidos, Argentina y México. 
 
-## 3. Definición del producto
-![Prototipo pantalla 1](https://raw.githubusercontent.com/LeidyCM99/BOG002-card-validation/main/src/Imagenes/Prototipo1.png)
+Actualmente las personas estan sumergidas en estres,  la cabeza saturada de información  o  sienten que hay un tema en el que no son su fuerte o por el contrario son su fuerte pero están interesados en aprender más, una forma  de sentirse mejor, liberarse, encontrarse es mediante un podcast.
+
+El producto se desarrolló pensando en la necesidad de acceder a una plataforma de pagos segura en la que se pueda realizar la compra de contenido exclusivo del podcast. Este diseño contiene los colores y diseño representativos de la marca Bajo el Tapete.
+
+## 4. Prototipo final
+![Prototipo pantalla 1](https://raw.githubusercontent.com/LeidyCM99/BOG002-card-validation/main/src/Imagenes/Prototipo1.jpg)
 ![Prototipo pantalla 2](https://raw.githubusercontent.com/LeidyCM99/BOG002-card-validation/main/src/Imagenes/Prototipo2.png)
 ![Prototipo pantalla 3](https://raw.githubusercontent.com/LeidyCM99/BOG002-card-validation/main/src/Imagenes/Prototipo3.png)
+
+## 5. Objetivos de aprendizaje
 
 ### HTML y CSS
 
@@ -81,42 +86,6 @@ Actualmente las personas estan sumergidas en estres,  la cabeza saturada de info
 * [x] Aplicar los principios de diseño visual (contraste, alineación, jerarquía)
 
 
+### Realizado por Leidy Paola Castro y María Camila Martínez - 2021
 
-
-### Definición del producto
-
-En el `README.md`, cuéntanos cómo pensaste en los usuarios y cuál fue tu proceso
-para definir el producto final a nivel de experiencia y de interfaz.
-
-* Quiénes son los principales usuarios de producto.
-* Cuáles son los objetivos de estos usuarios en relación con tu producto.
-* Cómo crees que el producto que estás creando está resolviendo sus problemas.
-
-### Interfaz de usuario (UI)
-
-La interfaz debe permitir al usuario:
-
-* Insertar el número que queremos validar.
-* Ver el resultado si es válido o no.
-* Ocultar todos los dígitos de su número de tarjeta menos los últimos
-4 caracteres.
-* No debe poder ingresar un campo vacío.
-
-
-
-##### `README.md`
-
-Debe contener lo siguiente:
-
-* Un título con el nombre de tu proyecto.
-* Un resumen de 1 o 2 líneas de qué se trata tu proyecto.
-* La imagen final de tu proyecto.
-* Investigación UX:
-  1. Explicar quiénes son los usuarios y los objetivos en relación con el
-    producto.
-  2. Explicar cómo el producto soluciona los problemas/necesidades de dichos
-    usuarios.
-  3. Luego colocarás la foto de tu primer prototipo en papel.
-  4. Agregar un resumen del feedback recibido indicando las mejoras a realizar.
-  5. Imagen del prototipo final.
 
