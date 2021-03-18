@@ -4,7 +4,7 @@
 ## Índice
 
 * [1. Resumen del Proyecto](#1-resumen-del-proyecto)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
+* [2. Imagen final del proyecto](#2-imagen-final-del-proyecto)
 * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
 * [4. Consideraciones generales](#4-consideraciones-generales)
 * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
@@ -33,9 +33,7 @@ para ocultar todos los dígitos de la tarjeta ingresada menos los últimos 4.
 
 ## 3. Definición del producto
 
-Trabajando en parejas aprenderán a construir una aplicación web que interactuará
-con lx usuarix final a través del navegador, utilizando HTML, CSS y JavaScript
-como tecnologías.
+Actualmente las personas estan sumergidas en estres,  la cabeza saturada de información  o  sienten que hay un tema en el que no son su fuerte o por el contrario son su fuerte pero están interesados en aprender más, una forma  de sentirse mejor, liberarse, encontrar(se) es mediante un podcast.
 
 ### HTML y CSS
 
