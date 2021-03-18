@@ -29,11 +29,14 @@ para ocultar todos los dígitos de la tarjeta ingresada menos los últimos 4.
 ![Aplicación pantalla 4](https://raw.githubusercontent.com/LeidyCM99/BOG002-card-validation/main/src/Imagenes/Pantalla4.png)
 
 
-
-
 ## 3. Definición del producto
 
 Actualmente las personas estan sumergidas en estres,  la cabeza saturada de información  o  sienten que hay un tema en el que no son su fuerte o por el contrario son su fuerte pero están interesados en aprender más, una forma  de sentirse mejor, liberarse, encontrar(se) es mediante un podcast.
+
+## 3. Definición del producto
+![Prototipo pantalla 1](https://raw.githubusercontent.com/LeidyCM99/BOG002-card-validation/main/src/Imagenes/Prototipo1.png)
+![Prototipo pantalla 2](https://raw.githubusercontent.com/LeidyCM99/BOG002-card-validation/main/src/Imagenes/Prototipo2.png)
+![Prototipo pantalla 3](https://raw.githubusercontent.com/LeidyCM99/BOG002-card-validation/main/src/Imagenes/Prototipo3.png)
 
 ### HTML y CSS
 
